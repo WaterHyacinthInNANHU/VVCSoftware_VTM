@@ -647,7 +647,7 @@ Picture* DecLib::xGetNewPicBuffer( const SPS &sps, const PPS &pps, const uint32_
   {
     pcPic = new Picture();
 
-    pcPic->create(sps.getWrapAroundEnabledFlag(), sps.getChromaFormatIdc(), Size(pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples()),
+    pcPic->create(true, sps.getChromaFormatIdc(), Size(pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples()),
       sps.getMaxCUWidth(), sps.getMaxCUWidth() + PIC_MARGIN, true, layerId, getShutterFilterFlag() );
 
     m_cListPic.push_back( pcPic );
@@ -684,7 +684,7 @@ Picture* DecLib::xGetNewPicBuffer( const SPS &sps, const PPS &pps, const uint32_
 
     m_cListPic.push_back( pcPic );
 
-    pcPic->create(sps.getWrapAroundEnabledFlag(), sps.getChromaFormatIdc(), Size(pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples()), sps.getMaxCUWidth(), sps.getMaxCUWidth() + PIC_MARGIN, true, layerId, getShutterFilterFlag());
+    pcPic->create(true, sps.getChromaFormatIdc(), Size(pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples()), sps.getMaxCUWidth(), sps.getMaxCUWidth() + PIC_MARGIN, true, layerId, getShutterFilterFlag());
   }
   else
   {
@@ -692,7 +692,7 @@ Picture* DecLib::xGetNewPicBuffer( const SPS &sps, const PPS &pps, const uint32_
     {
       pcPic->destroy();
 
-      pcPic->create(sps.getWrapAroundEnabledFlag(), sps.getChromaFormatIdc(), Size( pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples() ), sps.getMaxCUWidth(), sps.getMaxCUWidth() + PIC_MARGIN, true, layerId, getShutterFilterFlag());
+      pcPic->create(true, sps.getChromaFormatIdc(), Size( pps.getPicWidthInLumaSamples(), pps.getPicHeightInLumaSamples() ), sps.getMaxCUWidth(), sps.getMaxCUWidth() + PIC_MARGIN, true, layerId, getShutterFilterFlag());
     }
   }
 
