@@ -67,6 +67,7 @@
 
 #define JVET_AG2034_SPTI_SEI 1 //JVET-AE0079, JVET-AF0055, JVET-AF0069, JVET-AF0097, JVET-AG0191, JVET-AG0188 
 
+#define JVET_AI0153_OMI_SEI                               1 // JVET-AI0153: OMI-SEI Implementation as JVET-AH0346
 
 //########### place macros to be be kept below this line ###############
 
