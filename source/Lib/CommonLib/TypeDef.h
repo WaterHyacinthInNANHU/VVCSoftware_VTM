@@ -67,6 +67,7 @@
 
 #define JVET_AG2034_SPTI_SEI 1 //JVET-AE0079, JVET-AF0055, JVET-AF0069, JVET-AF0097, JVET-AG0191, JVET-AG0188 
 
+#define JVET_AI0071_NNPFC_SPO_USAGE_IDCS 1  // Indication of the user viewing and/or machine analysis usage in the NNPFC and SPO SEI messages
 
 //########### place macros to be be kept below this line ###############
 
