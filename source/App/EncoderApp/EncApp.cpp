@@ -1319,6 +1319,10 @@ void EncApp::xInitLibCfg( int layerIdx )
         }
       }
 #endif
+#if JVET_AI0071_NNPFC_SPO_USAGE_IDCS
+      m_cEncLib.setNNPostFilterSEICharacteristicsForHumanViewingIdc      ( m_nnPostFilterSEICharacteristicsForHumanViewingIdc[i], i);
+      m_cEncLib.setNNPostFilterSEICharacteristicsForMachineAnalysisIdc   ( m_nnPostFilterSEICharacteristicsForMachineAnalysisIdc[i], i);
+#endif
       m_cEncLib.setNNPostFilterSEICharacteristicsUriTag                  ( m_nnPostFilterSEICharacteristicsUriTag[i], i);
       m_cEncLib.setNNPostFilterSEICharacteristicsUri                     ( m_nnPostFilterSEICharacteristicsUri[i], i);
     }
@@ -1397,6 +1401,10 @@ void EncApp::xInitLibCfg( int layerIdx )
 
   m_cEncLib.setPoSEIEnabled                                      (m_poSEIEnabled);
   m_cEncLib.setPoSEIId                                           (m_poSEIId);
+#if JVET_AI0071_NNPFC_SPO_USAGE_IDCS
+  m_cEncLib.setPoSEIForHumanViewingIdc                           (m_poSEIForHumanViewingIdc);
+  m_cEncLib.setPoSEIForMachineAnalysisIdc                        (m_poSEIForMachineAnalysisIdc);
+#endif
 
 #if JVET_AG2034_SPTI_SEI
   m_cEncLib.setSptiSEIEnabled(m_sptiSEIEnabled);
